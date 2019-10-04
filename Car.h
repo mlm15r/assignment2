@@ -15,7 +15,7 @@ private:
 public:
     Car();
 
-    explicit Car   (string brand, string model, string fuelType,
+    explicit Car (string brand, string model, string fuelType,
                  string engineSize);
 
     virtual ~Car();

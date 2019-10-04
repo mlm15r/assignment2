@@ -6,21 +6,21 @@
 #define ASSIGNMENT2_JET_H
 
 #include "PoweredVehicle.h"
+#include <cstdlib>
 
-class Car : public PoweredVehicle {
+class Jet : public PoweredVehicle {
 
 private:
-    string myEngineSize;
+    int numberOfEngines = 1;
 
 public:
-    Car();
+    Jet ();
 
-    explicit Car   (string brand, string model, string fuelType,
-                    string engineSize);
+    explicit Jet (string brand, string model, string fuelType);
 
-    virtual ~Car();
-    string getEngineSize();
-    void setEngineSize(string engineSize);
+    virtual ~Jet();
+    int getNumberOfEngines();
+    void setNumberOfEngines (int num);
     virtual double mileageEstimate(double time);
     virtual string toString();
 };
