@@ -11,6 +11,7 @@ class Bicycle : public Vehicle {
 
 private:
     int myGearCount;
+    int numberOfGears = 3;
 
 public:
     explicit Bicycle(string brand, string model, int gearCount = 1);
