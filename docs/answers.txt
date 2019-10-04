@@ -1,1 +1,117 @@
-1
+(a) Paste the console output you saved at the end of step 3.C (2 points)
+
+    mmolina@MAJORS30 MINGW64 ~/PycharmProjects/assignment2/docs (master)
+    $ git commit
+    Aborting commit due to empty commit message.
+
+    mmolina@MAJORS30 MINGW64 ~/PycharmProjects/assignment2/docs (master)
+    $ git push
+    Enumerating objects: 6, done.
+    Counting objects: 100% (6/6), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (4/4), 495 bytes | 495.00 KiB/s, done.
+    Total 4 (delta 1), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    To https://github.com/mlm15r/assignment2.git
+       4ef31b8..ebda05d  master -> master
+
+    mmolina@MAJORS30 MINGW64 ~/PycharmProjects/assignment2/docs (master)
+    $ git commit
+    On branch master
+    Your branch is up to date with 'origin/master'.
+
+    Changes not staged for commit:
+            modified:   answers.txt
+
+    Untracked files:
+            ../.idea/
+
+    no changes added to commit
+
+(b) How many commits have been done to the repository (not only by you, but by
+anyone) so far? Write the git command you used to get this information (4 points)
+
+    There has been 10 commits done to this repository
+
+    mmolina@MAJORS30 MINGW64 ~/PycharmProjects/assignment2/docs (master)
+    $ git log -g
+
+(c) When was the .gitignore file modified last? Write the git command you used to get
+this information (4 points)
+
+    mmolina@MAJORS30 MINGW64 ~/PycharmProjects/assignment2 (master)
+    $ git log .gitignore
+    commit e424a923e80da4772ca789591ef3326230062a71
+    Author: Esteban Parra <estebanpr014@gmail.com>
+    Date:   Wed Sep 25 18:13:30 2019 -0400
+
+    -> Tracking .gitignore
+
+(d) Mention two reasons why branches are used in a Git repository (4 points)
+
+    So two o more different people can work in the same project and find different solutions for the same problem
+
+    If two different project need same basic or master code. It can be shared and copied for different purposes
+
+(e) What is the difference between git log and git status? (4 points)
+
+    The git status command displays the state of the working directory and the staging area. It lets you see which
+    changes have been staged, which haven’t, and which files aren’t being tracked by Git. Status output does not show
+    you any information regarding the committed project history. For this, you need to use git log.
+
+    The git log command displays committed snapshots. It lets you list the project history, filter it, and search for
+    specific changes. While git status lets you inspect the working directory and the staging area, git log only
+    operates on the committed history.
+
+(f) What command would you use to see the commits where “Vehicle.h” was one of the
+committed files? (4 points)
+
+    mmolina@MAJORS30 MINGW64 ~/PycharmProjects/assignment2 (master)
+    $ git log -S Vehicle.h
+
+(g) What command would you use to see the commits whose commit message contains the
+word “file”? (4 points)
+
+    mmolina@MAJORS30 MINGW64 ~/PycharmProjects/assignment2 (master)
+    $ git grep 'file' $(git rev-list --all)
+
+(h) In the context of object-oriented programming (I) What is inheritance? (II) What is
+polymorphism? (III) What is encapsulation? (6 points)
+
+    (I) The capability of a class to derive properties and characteristics from another class is called Inheritance.
+    Inheritance is one of the most important feature of Object Oriented Programming.
+
+    (II) e can define polymorphism as the ability of a message to be displayed in more than one form. Real life example
+    of polymorphism, a person at the same time can have different characteristic. Like a man at the same time is a
+    father, a husband, an employee. So the same person posses different behavior in different situations. This is called
+    polymorphism. polymorphism is considered as one of the important features of Object Oriented Programming.
+
+    (III) n Object Oriented Programming, Encapsulation is defined as binding together the data and the functions that
+    manipulates them. Consider a real life example of encapsulation, in a company there are different sections like the
+    accounts section, finance section, sales section etc. The finance section handles all the financial transactions and
+    keep records of all the data related to finance.
+
+Read the “Git Commands, workflow, and resources.pdf” file on Canvas and answer the
+following questions:
+
+(i) What is the main difference between the “Dictator and Lieutenants” workflow and the
+“Integration manager” workflow? (5 points)
+
+    DICTATOR and LIEUTENANTS
+    Distributed development and integration
+    One central/blessed repository: Everyone makes pull from this repository. Only the dictator can push to it
+    Dictator repository: Merges changes in the lieutenant repositories and solves any arising conflicts
+    Lieutenant repositories: Merges changes for some (not all) developers and solves conflicts. A developer pushes
+    changes to the assigned lieutenant repository.
+
+    INTEGRATION MANAGER
+    Each developer makes push to his/her own public repository, and pull from the blessed/central repository.
+    Integration conflict resolution are done by the integration manager. (Centralized integration).
+    Each developer makes pull and push to his/her own public repository.
+
+(j) How would a team of 100 developers benefit from following the “Dictator and
+Lieutenants” workflow instead of the “Centralized” workflow? (5 points)
+
+    The team will benefit of the Dictator and Lieutenants workflow because it is a big team. It will be easier to be
+    organized with a Dictator and Lieutenants workflow
