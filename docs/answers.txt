@@ -115,3 +115,10 @@ Lieutenants” workflow instead of the “Centralized” workflow? (5 points)
 
     The team will benefit of the Dictator and Lieutenants workflow because it is a big team. It will be easier to be
     organized with a Dictator and Lieutenants workflow
+
+
+(5) Is the Driving simulator prototype using polymorphism and/or encapsulation? If you find that the prototype is using
+any of these two OOP principles, please discuss in which way the prototype is using it.
+
+   Yes, The driving simulator is using encapsulation when creating different types of vehicles, all different vehicles
+   but with similar
