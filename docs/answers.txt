@@ -57,7 +57,7 @@ this information (4 points)
 (e) What is the difference between git log and git status? (4 points)
 
     The git status command displays the state of the working directory and the staging area. It lets you see which
-    changes have been staged, which haven’t, and which files aren’t being tracked by Git. Status output does not show
+    changes have been staged, which haven’t, and which files are not being tracked by Git. Status output does not show
     you any information regarding the committed project history. For this, you need to use git log.
 
     The git log command displays committed snapshots. It lets you list the project history, filter it, and search for
