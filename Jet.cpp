@@ -34,8 +34,8 @@ void Jet::setNumberOfEngines(int num) {
 
 double Jet::mileageEstimate(double time) {
     double mileage;
-    float rnd = (100-40+1)*rand()/(RAND_MAX + 1);
-    mileage *= rnd;
+    double rnd = (100-40+1)*rand()/(RAND_MAX + 1);
+    mileage = time * rnd;
     if (getNumberOfEngines()>=2){
         mileage += (mileage*0.55)*getNumberOfEngines();
         return mileage;
